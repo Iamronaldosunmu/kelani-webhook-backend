@@ -1,0 +1,24 @@
+{
+  "name": "kelani-webhook-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iamronaldosunmu/kelani-webhook-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iamronaldosunmu/kelani-webhook-backend/issues"
+  },
+  "homepage": "https://github.com/Iamronaldosunmu/kelani-webhook-backend#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.8",
+    "nodemailer-express-handlebars": "^6.1.0"
+  }
+}
