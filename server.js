@@ -45,8 +45,8 @@ app.use(express.json());
 
 app.post("/kelani-contact-us", (req, res) => {
   const { name, email, phone, message } = req.body;
-
-  return console.log(req.body);
+  console.log(req.body);
+  return res.status(200).json({ message: "success" });
 });
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
