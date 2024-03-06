@@ -299,6 +299,8 @@ app.post("/kelani-power-cta", async (req, res) => {
       },
     };
 
+    console.log(req.body, mailOptions, backendMailOptions)
+
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
         console.error("Error sending email:", error);
