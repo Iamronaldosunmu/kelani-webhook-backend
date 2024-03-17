@@ -296,10 +296,13 @@ app.post("/kelani-power-cta", async (req, res) => {
         lastMonthUtilityBill: req.body.data.rows[0]["lastMonthUtilityBill"],
         hoursOfPower: req.body.data.rows[0]["hoursOfPowerRequired"],
         ownedPowerSources: req.body.data.rows[0]["ownedPowerSources"],
+        address: req.body.data.rows[0]["address"],
+        city: req.body.data.rows[0]["city"],
+        state: req.body.data.rows[0]["state"],
       },
     };
 
-    console.log(req.body.data.rows[0], mailOptions, backendMailOptions)
+    console.log(req.body.data.rows[0], mailOptions, backendMailOptions);
 
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
@@ -334,7 +337,7 @@ app.post("/kelani-consulting-cta", async (req, res) => {
     const mailOptions = {
       from: process.env.APP_EMAIL_ADDRESS,
       to: user.email,
-      subject: "Thank You for Choosing Kelani Power!",
+      subject: "Thank You for Choosing Kelani Consulting!",
       template: "kelani-consulting-cta-response", //Use the rendered HTML from the template
       context: {
         name,
@@ -344,7 +347,7 @@ app.post("/kelani-consulting-cta", async (req, res) => {
     const backendMailOptions = {
       from: process.env.APP_EMAIL_ADDRESS,
       to: "ronaldosunmu@gmail.com",
-      subject: "New Inquiry - Kelani Power Call to Action Form",
+      subject: "New Inquiry - Kelani Consulting Call to Action Form",
       template: "kelani-consulting-cta-backend-response", //Use the rendered HTML from the template
       context: {
         name,
@@ -352,13 +355,13 @@ app.post("/kelani-consulting-cta", async (req, res) => {
         phoneNumber: req.body.data.rows[0]["phoneNumber"],
         businessName: req.body.data.rows[0]["companyName"],
         industry: req.body.data.rows[0]["industry"],
-        companySize:
-          req.body.data.rows[0]["companySize"],
+        companySize: req.body.data.rows[0]["companySize"],
         positionsToFill: req.body.data.rows[0]["positionsToFill"],
         typeOfHiringNeeds: req.body.data.rows[0]["typeOfHiringNeeds"],
         urgencyOfHiring: req.body.data.rows[0]["urgencyOfHiring"],
         additionalInformation: req.body.data.rows[0]["additionalInformation"],
-        specificDetailsRelatedToHiringNeeds: req.body.data.rows[0]["specificDetailsRelatedToHiringNeeds"],
+        specificDetailsRelatedToHiringNeeds:
+          req.body.data.rows[0]["specificDetailsRelatedToHiringNeeds"],
       },
     };
 
@@ -405,7 +408,7 @@ app.post("/kelani-engineering-cta", async (req, res) => {
     const backendMailOptions = {
       from: process.env.APP_EMAIL_ADDRESS,
       to: "ronaldosunmu@gmail.com",
-      subject: "New Inquiry - Kelani Power Call to Action Form",
+      subject: "New Inquiry - Kelani Engineering Call to Action Form",
       template: "kelani-engineering-cta-backend-response", //Use the rendered HTML from the template
       context: {
         name,
@@ -413,8 +416,7 @@ app.post("/kelani-engineering-cta", async (req, res) => {
         phoneNumber: req.body.data.rows[0]["phoneNumber"],
         businessName: req.body.data.rows[0]["companyName"],
         industry: req.body.data.rows[0]["industry"],
-        need:
-          req.body.data.rows[0]["need"],
+        need: req.body.data.rows[0]["need"],
         address: req.body.data.rows[0]["address"],
         city: req.body.data.rows[0]["city"],
         state: req.body.data.rows[0]["state"],
