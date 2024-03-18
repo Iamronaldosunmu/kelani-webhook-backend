@@ -221,7 +221,7 @@ app.post("/kelani-consulting-contact-us", async (req, res) => {
       from: process.env.APP_EMAIL_ADDRESS,
       to: user.email,
       subject: "We got your message",
-      template: "kelani-power-contact-us", //Use the rendered HTML from the template
+      template: "kelani-consulting-contact-us", //Use the rendered HTML from the template
       context: {
         name,
       },
