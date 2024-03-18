@@ -123,7 +123,7 @@ app.post("/kelani-power-contact-us", async (req, res) => {
       template: "kelani-contact-us-backend-response", //Use the rendered HTML from the template
       context: {
         name,
-        email,
+        email: user.email,
         message: req.body.data.rows[0]["Message"],
         branch: "Power",
       },
@@ -179,7 +179,7 @@ app.post("/kelani-engineering-contact-us", async (req, res) => {
       template: "kelani-contact-us-backend-response", //Use the rendered HTML from the template
       context: {
         name,
-        email,
+        email: user.email,
         message: req.body.data.rows[0]["Message"],
         branch: "Engineering",
       },
@@ -234,7 +234,7 @@ app.post("/kelani-consulting-contact-us", async (req, res) => {
       template: "kelani-contact-us-backend-response", //Use the rendered HTML from the template
       context: {
         name,
-        email,
+        email: user.email,
         message: req.body.data.rows[0]["Message"],
         branch: "Consulting",
       },
