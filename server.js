@@ -48,6 +48,8 @@ app.post("/kelani-contact-us", async (req, res) => {
       email: req.body.data.rows[0]["Email"],
     };
 
+    console.log(user);
+
     const mailOptions = {
       from: process.env.APP_EMAIL_ADDRESS,
       to: user.email,
