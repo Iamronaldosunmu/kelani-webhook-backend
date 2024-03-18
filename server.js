@@ -67,7 +67,7 @@ app.post("/kelani-contact-us", async (req, res) => {
       template: "kelani-contact-us-backend-response", //Use the rendered HTML from the template
       context: {
         name,
-        email,
+        email: user.email,
         message: req.body.data.rows[0]["Message"],
         branch: "",
       },
