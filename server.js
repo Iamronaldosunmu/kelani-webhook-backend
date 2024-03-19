@@ -339,6 +339,7 @@ app.post("/kelani-consulting-cta", async (req, res) => {
       name,
       email: req.body.data.rows[0]["email"],
     };
+    console.log(user)
     const mailOptions = {
       from: process.env.APP_EMAIL_ADDRESS,
       to: user.email,
