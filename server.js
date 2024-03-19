@@ -128,6 +128,8 @@ app.post("/kelani-power-contact-us", async (req, res) => {
       },
     };
 
+    console.log(mailOptions, backendMailOptions)
+
     // Send email using Nodemailer
     await transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
