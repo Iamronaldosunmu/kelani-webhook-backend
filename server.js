@@ -131,7 +131,7 @@ app.post("/kelani-power-contact-us", async (req, res) => {
     };
 
     // Send email using Nodemailer
-    transporter.sendMail(mailOptions, (error, info) => {
+    await transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
         console.error("Error sending email:", error);
         res.status(500).send("Error sending email");
@@ -139,7 +139,7 @@ app.post("/kelani-power-contact-us", async (req, res) => {
         console.log("Email sent:", info.response);
       }
     });
-    transporter.sendMail(backendMailOptions, (error, info) => {
+    await transporter.sendMail(backendMailOptions, (error, info) => {
       if (error) {
         console.error("Error sending email:", error);
         res.status(500).send("Error sending email");
