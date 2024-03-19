@@ -62,7 +62,7 @@ app.post("/kelani-contact-us", async (req, res) => {
 
     const backendMailOptions = {
       from: process.env.APP_EMAIL_ADDRESS,
-      to: "ronaldosunmu@gmail.com",
+      to: process.env.APP_EMAIL_ADDRESS,
       subject: "New Contact Us Form Submission",
       template: "kelani-contact-us-backend-response", //Use the rendered HTML from the template
       context: {
@@ -117,7 +117,7 @@ app.post("/kelani-power-contact-us", async (req, res) => {
 
     const backendMailOptions = {
       from: process.env.APP_EMAIL_ADDRESS,
-      to: "ronaldosunmu@gmail.com",
+      to: process.env.APP_EMAIL_ADDRESS,
       subject: "New Contact Us Form Submission",
       template: "kelani-contact-us-backend-response", //Use the rendered HTML from the template
       context: {
@@ -177,7 +177,7 @@ app.post("/kelani-engineering-contact-us", async (req, res) => {
 
     const backendMailOptions = {
       from: process.env.APP_EMAIL_ADDRESS,
-      to: "ronaldosunmu@gmail.com",
+      to: process.env.APP_EMAIL_ADDRESS,
       subject: "New Contact Us Form Submission",
       template: "kelani-contact-us-backend-response", //Use the rendered HTML from the template
       context: {
@@ -232,7 +232,7 @@ app.post("/kelani-consulting-contact-us", async (req, res) => {
 
     const backendMailOptions = {
       from: process.env.APP_EMAIL_ADDRESS,
-      to: "ronaldosunmu@gmail.com",
+      to: process.env.APP_EMAIL_ADDRESS,
       subject: "New Contact Us Form Submission",
       template: "kelani-contact-us-backend-response", //Use the rendered HTML from the template
       context: {
@@ -286,7 +286,7 @@ app.post("/kelani-power-cta", async (req, res) => {
 
     const backendMailOptions = {
       from: process.env.APP_EMAIL_ADDRESS,
-      to: "ronaldosunmu@gmail.com",
+      to: process.env.APP_EMAIL_ADDRESS,
       subject: "New Inquiry - Kelani Power Call to Action Form",
       template: "kelani-power-cta-backend-response", //Use the rendered HTML from the template
       context: {
@@ -352,7 +352,7 @@ app.post("/kelani-consulting-cta", async (req, res) => {
 
     const backendMailOptions = {
       from: process.env.APP_EMAIL_ADDRESS,
-      to: "ronaldosunmu@gmail.com",
+      to: process.env.APP_EMAIL_ADDRESS,
       subject: "New Inquiry - Kelani Consulting Call to Action Form",
       template: "kelani-consulting-cta-backend-response", //Use the rendered HTML from the template
       context: {
@@ -413,7 +413,7 @@ app.post("/kelani-engineering-cta", async (req, res) => {
 
     const backendMailOptions = {
       from: process.env.APP_EMAIL_ADDRESS,
-      to: "ronaldosunmu@gmail.com",
+      to: process.env.APP_EMAIL_ADDRESS,
       subject: "New Inquiry - Kelani Engineering Call to Action Form",
       template: "kelani-engineering-cta-backend-response", //Use the rendered HTML from the template
       context: {
