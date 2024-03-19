@@ -98,10 +98,8 @@ app.post("/kelani-contact-us", async (req, res) => {
 });
 
 app.post("/kelani-power-contact-us", async (req, res) => {
-  console.log(req.body)
   try {
     const name = req.body.data.rows[0]["Name"];
-    const email = req.body.data.rows[0]["Email"];
     const user = {
       name,
       email: req.body.data.rows[0]["Email"],
